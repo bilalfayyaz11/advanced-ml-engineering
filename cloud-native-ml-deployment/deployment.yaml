@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mnist-model-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mnist-model
+  template:
+    metadata:
+      labels:
+        app: mnist-model
+    spec:
+      containers:
+        - name: mnist-model
+          image: mnist-model-api:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+
