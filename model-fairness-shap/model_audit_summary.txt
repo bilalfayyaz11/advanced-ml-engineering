@@ -1,0 +1,28 @@
+Model Fairness and Explainability Audit
+======================================
+
+Overall Accuracy: 0.8517
+
+Fairness Metrics by Sex:
+ group  sample_count  accuracy  true_positive_rate_equal_opportunity  selection_rate_disparate_impact
+Female          2918    0.9184                                0.5234                           0.0874
+  Male          6127    0.8200                                0.6424                           0.2673
+
+Top 10 SHAP Features:
+                          feature  mean_absolute_shap_value
+                              age                  0.041006
+                    education-num                  0.040898
+marital-status_Married-civ-spouse                  0.036779
+                   hours-per-week                  0.021779
+     marital-status_Never-married                  0.021642
+                     capital-gain                  0.020483
+          marital-status_Divorced                  0.010249
+                relationship_Wife                  0.009489
+                       sex_Female                  0.008555
+         occupation_Other-service                  0.008383
+
+Interpretation:
+- Accuracy shows general model performance.
+- True positive rate supports equal opportunity analysis.
+- Selection rate supports disparate impact analysis.
+- SHAP values explain which features most influenced predictions.

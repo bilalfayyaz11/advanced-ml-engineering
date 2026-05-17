@@ -1,0 +1,3 @@
+group,sample_count,accuracy,true_positive_rate_equal_opportunity,selection_rate_disparate_impact
+Female,2918,0.9184,0.5234,0.0874
+Male,6127,0.82,0.6424,0.2673
